@@ -4,6 +4,9 @@ import { ThemeProvider } from './contexts/ThemeContext';
 import Navbar from './components/common/Navbar';
 import Footer from './components/common/Footer';
 import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import DestinationsPage from './pages/DestinationsPage';
+import ContactPage from './pages/ContactPage';
 import LocationDetailPage from './pages/LocationDetailPage';
 import MapViewPage from './pages/MapViewPage';
 import AdminPage from './pages/AdminPage';
@@ -22,6 +25,9 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/destinations" element={<DestinationsPage />} />
+            <Route path="/contact" element={<ContactPage />} />
             <Route path="/chennai" element={<ChennaiPage />} />
             <Route path="/madurai" element={<MaduraiPage />} />
             <Route path="/ooty" element={<OotyPage />} />

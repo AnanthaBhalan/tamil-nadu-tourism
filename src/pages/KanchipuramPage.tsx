@@ -1,12 +1,13 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import MapComponent from '../components/MapComponent';
+import LocationRestaurants from '../components/restaurants/LocationRestaurants';
 
 const KanchipuramPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-amber-50 to-amber-100 p-6">
+    <div className="min-h-screen bg-gradient-to-b from-amber-50 to-amber-100 dark:from-gray-900 dark:to-gray-800 p-6 transition-colors duration-200">
       <div className="max-w-4xl mx-auto">
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-colors duration-200">
           <div className="h-64 bg-amber-600 flex items-center justify-center">
             <div className="bg-black bg-opacity-50 h-full w-full flex items-center justify-center">
               <h1 className="text-4xl font-bold text-white">Kanchipuram</h1>
@@ -15,8 +16,8 @@ const KanchipuramPage: React.FC = () => {
           
           <div className="p-6">
             <div className="mb-6">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">About Kanchipuram</h2>
-              <p className="text-gray-600">
+              <h2 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4">About Kanchipuram</h2>
+              <p className="text-gray-600 dark:text-gray-300">
                 Kanchipuram, also known as the "City of Thousand Temples," is one of the seven sacred cities of India. 
                 Famous for its ancient temples, rich history, and exquisite silk sarees, Kanchipuram is a major pilgrimage 
                 center and a treasure trove of Dravidian architecture and culture.
@@ -78,6 +79,11 @@ const KanchipuramPage: React.FC = () => {
                   ]}
                 />
               </div>
+            </div>
+
+            {/* Restaurants Section */}
+            <div className="mt-8">
+              <LocationRestaurants location="Kanchipuram" title="Kanchipuram" />
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 mt-8">

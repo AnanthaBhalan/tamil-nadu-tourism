@@ -156,6 +156,77 @@ const HomePage = () => {
             ))}
           </div>
         </div>
+
+      {/* Quick Links Section */}
+      <div className="py-16 bg-white dark:bg-gray-900 transition-colors duration-200">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Explore More</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center p-6 bg-blue-50 dark:bg-blue-900/30 rounded-lg hover:shadow-lg transition-shadow duration-300">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">About Tamil Nadu</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                Learn about our rich heritage, culture, and what makes Tamil Nadu special
+              </p>
+              <Link 
+                to="/about"
+                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+              >
+                Discover More
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+
+            <div className="text-center p-6 bg-green-50 dark:bg-green-900/30 rounded-lg hover:shadow-lg transition-shadow duration-300">
+              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">All Destinations</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                Explore all our amazing destinations from beaches to hill stations
+              </p>
+              <Link 
+                to="/destinations"
+                className="inline-flex items-center text-green-600 hover:text-green-800 font-medium"
+              >
+                View All
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+
+            <div className="text-center p-6 bg-purple-50 dark:bg-purple-900/30 rounded-lg hover:shadow-lg transition-shadow duration-300">
+              <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Get in Touch</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                Have questions? We're here to help you plan your perfect trip
+              </p>
+              <Link 
+                to="/contact"
+                className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium"
+              >
+                Contact Us
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

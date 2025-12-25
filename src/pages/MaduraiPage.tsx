@@ -1,12 +1,13 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import MapComponent from '../components/MapComponent';
+import LocationRestaurants from '../components/restaurants/LocationRestaurants';
 
 const MaduraiPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-orange-50 to-orange-100 p-6">
+    <div className="min-h-screen bg-gradient-to-b from-orange-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 p-6 transition-colors duration-200">
       <div className="max-w-4xl mx-auto">
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-colors duration-200">
           <div className="h-64 bg-purple-600 flex items-center justify-center">
             <div className="bg-black bg-opacity-50 h-full flex items-center justify-center">
               <h1 className="text-4xl font-bold text-white">Madurai</h1>
@@ -15,8 +16,8 @@ const MaduraiPage: React.FC = () => {
           
           <div className="p-6">
             <div className="mb-6">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">About Madurai</h2>
-              <p className="text-gray-600">
+              <h2 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4">About Madurai</h2>
+              <p className="text-gray-600 dark:text-gray-300">
                 Known as the "Athens of the East," Madurai is one of the oldest continuously inhabited cities in the world. 
                 It's famous for its magnificent Meenakshi Amman Temple, rich cultural heritage, and traditional Tamil architecture. 
                 The city is a major pilgrimage and cultural center in Tamil Nadu.
@@ -25,53 +26,53 @@ const MaduraiPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Popular Attractions</h3>
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Popular Attractions</h3>
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <span className="text-orange-500 mr-2">•</span>
-                    <span>Meenakshi Amman Temple</span>
+                    <span className="text-gray-700 dark:text-gray-300">Meenakshi Amman Temple</span>
                   </li>
                   <li className="flex items-center">
                     <span className="text-orange-500 mr-2">•</span>
-                    <span>Thirumalai Nayakkar Palace</span>
+                    <span className="text-gray-700 dark:text-gray-300">Thirumalai Nayakkar Palace</span>
                   </li>
                   <li className="flex items-center">
                     <span className="text-orange-500 mr-2">•</span>
-                    <span>Gandhi Memorial Museum</span>
+                    <span className="text-gray-700 dark:text-gray-300">Gandhi Memorial Museum</span>
                   </li>
                   <li className="flex items-center">
                     <span className="text-orange-500 mr-2">•</span>
-                    <span>Koodal Azhagar Temple</span>
+                    <span className="text-gray-700 dark:text-gray-300">Koodal Azhagar Temple</span>
                   </li>
                 </ul>
               </div>
               
               <div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Quick Facts</h3>
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Quick Facts</h3>
                 <ul className="space-y-2">
                   <li className="flex">
-                    <span className="font-medium w-32">Best Time to Visit:</span>
-                    <span>October to March</span>
+                    <span className="font-medium w-32 text-gray-700 dark:text-gray-300">Best Time to Visit:</span>
+                    <span className="text-gray-600 dark:text-gray-300">October to March</span>
                   </li>
                   <li className="flex">
-                    <span className="font-medium w-32">Local Cuisine:</span>
-                    <span>Jigarthanda, Paruthi Paal</span>
+                    <span className="font-medium w-32 text-gray-700 dark:text-gray-300">Local Cuisine:</span>
+                    <span className="text-gray-600 dark:text-gray-300">Jigarthanda, Paruthi Paal</span>
                   </li>
                   <li className="flex">
-                    <span className="font-medium w-32">Language:</span>
-                    <span>Tamil, English</span>
+                    <span className="font-medium w-32 text-gray-700 dark:text-gray-300">Language:</span>
+                    <span className="text-gray-600 dark:text-gray-300">Tamil, English</span>
                   </li>
                   <li className="flex">
-                    <span className="font-medium w-32">Best For:</span>
-                    <span>Temple Tourism, History, Culture</span>
+                    <span className="font-medium w-32 text-gray-700 dark:text-gray-300">Best For:</span>
+                    <span className="text-gray-600 dark:text-gray-300">Temple Lovers, History Enthusiasts</span>
                   </li>
                 </ul>
               </div>
             </div>
 
-            <div className="bg-orange-50 p-4 rounded-lg mb-6">
-              <h3 className="text-lg font-semibold text-orange-800 mb-2">Travel Tips</h3>
-              <p className="text-orange-700">
+            <div className="bg-orange-50 dark:bg-orange-900/30 p-4 rounded-lg mb-6">
+              <h3 className="text-lg font-semibold text-orange-800 dark:text-orange-300 mb-2">Travel Tips</h3>
+              <p className="text-orange-700 dark:text-orange-300">
                 • Visit Meenakshi Temple early morning to avoid crowds
                 <br />
                 • Try the famous Madurai Jigarthanda drink
@@ -83,7 +84,7 @@ const MaduraiPage: React.FC = () => {
             </div>
 
             <div className="mb-6">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4">Explore Madurai</h3>
+              <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Explore Madurai</h3>
               <div className="h-96 w-full rounded-lg overflow-hidden">
                 <MapComponent 
                   center={[9.9252, 78.1198]} // Madurai coordinates
@@ -114,10 +115,15 @@ const MaduraiPage: React.FC = () => {
               </div>
             </div>
 
+            {/* Restaurants Section */}
+            <div className="mt-8">
+              <LocationRestaurants location="Madurai" title="Madurai" />
+            </div>
+
             <div className="mt-6 flex justify-between items-center">
               <Link 
                 to="/" 
-                className="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition-colors"
+                className="px-4 py-2 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 rounded hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
               >
                 ← Back to Home
               </Link>
