@@ -8,8 +8,13 @@ const ChennaiPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-blue-100 dark:from-gray-900 dark:to-gray-800 p-6 transition-colors duration-200">
       <div className="max-w-4xl mx-auto">
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-colors duration-200">
-          <div className="h-64 bg-blue-600 flex items-center justify-center">
-            <div className="bg-black bg-opacity-50 h-full flex items-center justify-center">
+          <div className="h-64 relative overflow-hidden">
+            <img 
+              src="/images/destinations/chennai.jpg" 
+              alt="Chennai" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
               <h1 className="text-4xl font-bold text-white">Chennai</h1>
             </div>
           </div>
@@ -30,19 +35,19 @@ const ChennaiPage: React.FC = () => {
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <span className="text-blue-500 mr-2">•</span>
-                    <span className="text-gray-700 dark:text-gray-300">Marina Beach</span>
+                    <Link to="/chennai/marina-beach" className="text-gray-700 dark:text-gray-300 hover:underline">Marina Beach</Link>
                   </li>
                   <li className="flex items-center">
                     <span className="text-blue-500 mr-2">•</span>
-                    <span className="text-gray-700 dark:text-gray-300">Kapaleeshwarar Temple</span>
+                    <Link to="/chennai/kapaleeshwarar-temple" className="text-gray-700 dark:text-gray-300 hover:underline">Kapaleeshwarar Temple</Link>
                   </li>
                   <li className="flex items-center">
                     <span className="text-blue-500 mr-2">•</span>
-                    <span className="text-gray-700 dark:text-gray-300">Fort St. George</span>
+                    <Link to="/chennai/fort-st-george" className="text-gray-700 dark:text-gray-300 hover:underline">Fort St. George</Link>
                   </li>
                   <li className="flex items-center">
                     <span className="text-blue-500 mr-2">•</span>
-                    <span className="text-gray-700 dark:text-gray-300">San Thome Basilica</span>
+                    <Link to="/chennai/san-thome-basilica" className="text-gray-700 dark:text-gray-300 hover:underline">San Thome Basilica</Link>
                   </li>
                 </ul>
               </div>

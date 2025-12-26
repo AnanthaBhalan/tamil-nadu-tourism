@@ -6,7 +6,7 @@ const DestinationsPage: React.FC = () => {
     {
       name: 'Chennai',
       description: 'The capital city known for Marina Beach, temples, and vibrant culture',
-      image: 'chennai',
+      image: '/images/destinations/chennai.jpg',
       color: 'blue',
       path: '/chennai',
       highlights: ['Marina Beach', 'Kapaleeshwarar Temple', 'Fort St. George']
@@ -14,7 +14,7 @@ const DestinationsPage: React.FC = () => {
     {
       name: 'Madurai',
       description: 'Ancient city famous for Meenakshi Temple and rich cultural heritage',
-      image: 'madurai',
+      image: '/images/destinations/madurai.jpg',
       color: 'orange',
       path: '/madurai',
       highlights: ['Meenakshi Amman Temple', 'Thirumalai Nayakkar Palace', 'Gandhi Memorial Museum']
@@ -22,7 +22,7 @@ const DestinationsPage: React.FC = () => {
     {
       name: 'Ooty',
       description: 'Queen of Hill Stations with tea gardens and pleasant climate',
-      image: 'ooty',
+      image: '/images/destinations/ooty.jpg',
       color: 'green',
       path: '/ooty',
       highlights: ['Botanical Gardens', 'Nilgiri Mountain Railway', 'Doddabetta Peak']
@@ -30,7 +30,7 @@ const DestinationsPage: React.FC = () => {
     {
       name: 'Coimbatore',
       description: 'Manchester of South India, gateway to the Nilgiri Hills',
-      image: 'coimbatore',
+      image: '/images/Marudhamalai Temple.jpg',
       color: 'green',
       path: '/coimbatore',
       highlights: ['Marudhamalai Temple', 'VOC Park', 'Siruvani Waterfalls']
@@ -38,7 +38,7 @@ const DestinationsPage: React.FC = () => {
     {
       name: 'Kanchipuram',
       description: 'City of Thousand Temples and silk sarees',
-      image: 'kanchipuram',
+      image: '/images/Kamakshi Amman Temple.jpg',
       color: 'amber',
       path: '/kanchipuram',
       highlights: ['Kamakshi Amman Temple', 'Ekambareswarar Temple', 'Varadharaja Perumal Temple']
@@ -46,7 +46,7 @@ const DestinationsPage: React.FC = () => {
     {
       name: 'Rameshwaram',
       description: 'Sacred pilgrimage site with beautiful beaches and temples',
-      image: 'rameshwaram',
+      image: '/images/Ramanathaswamy Temple.jpg',
       color: 'blue',
       path: '/rameshwaram',
       highlights: ['Ramanathaswamy Temple', 'Pamban Bridge', 'Dhanushkodi Beach']
@@ -54,7 +54,7 @@ const DestinationsPage: React.FC = () => {
     {
       name: 'Kodaikanal',
       description: 'Princess of Hill Stations with misty mountains and lakes',
-      image: 'kodaikanal',
+      image: '/images/Kodaikanal Lake.jpg',
       color: 'green',
       path: '/kodaikanal',
       highlights: ['Kodaikanal Lake', 'Coakers Walk', 'Pillar Rocks']
@@ -62,7 +62,7 @@ const DestinationsPage: React.FC = () => {
     {
       name: 'Kanyakumari',
       description: 'Southern tip of India where three oceans meet',
-      image: 'kanyakumari',
+      image: '/images/Vivekananda Rock Memorial.jpg',
       color: 'blue',
       path: '/kanyakumari',
       highlights: ['Vivekananda Rock Memorial', 'Thiruvalluvar Statue', 'Sunset Point']
@@ -119,9 +119,14 @@ const DestinationsPage: React.FC = () => {
             const colors = getColorClasses(destination.color);
             return (
               <div key={destination.name} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className={`h-48 ${colors.bg} flex items-center justify-center relative`}>
-                  <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-                  <h2 className="text-3xl font-bold text-white relative z-10">{destination.name}</h2>
+                <div className="h-48 relative overflow-hidden">
+                  <img 
+                    src={destination.image}
+                    alt={`${destination.name} - ${destination.description}`}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                  <h2 className="absolute bottom-4 left-4 text-3xl font-bold text-white">{destination.name}</h2>
                 </div>
                 <div className="p-6">
                   <p className="text-gray-600 dark:text-gray-300 mb-4">
@@ -158,10 +163,16 @@ const DestinationsPage: React.FC = () => {
               const colors = getColorClasses(destination.color);
               return (
                 <div key={destination.name} className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">{destination.name}</h3>
-                    <div className={`w-16 h-16 ${colors.bg} rounded-full flex items-center justify-center`}>
-                      <span className="text-white text-xs font-bold">NEW</span>
+                  <div className="flex items-center space-x-4 mb-4">
+                    <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
+                      <img 
+                        src={destination.image}
+                        alt={destination.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="flex-grow">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white">{destination.name}</h3>
                     </div>
                   </div>
                   <p className="text-gray-600 dark:text-gray-300 mb-4">

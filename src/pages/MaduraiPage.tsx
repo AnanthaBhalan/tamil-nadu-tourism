@@ -8,8 +8,13 @@ const MaduraiPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 p-6 transition-colors duration-200">
       <div className="max-w-4xl mx-auto">
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-colors duration-200">
-          <div className="h-64 bg-purple-600 flex items-center justify-center">
-            <div className="bg-black bg-opacity-50 h-full flex items-center justify-center">
+          <div className="h-64 relative overflow-hidden">
+            <img 
+              src="/images/destinations/madurai.jpg" 
+              alt="Madurai" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
               <h1 className="text-4xl font-bold text-white">Madurai</h1>
             </div>
           </div>
@@ -30,19 +35,19 @@ const MaduraiPage: React.FC = () => {
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <span className="text-orange-500 mr-2">•</span>
-                    <span className="text-gray-700 dark:text-gray-300">Meenakshi Amman Temple</span>
+                    <Link to="/madurai/meenakshi-temple" className="text-gray-700 dark:text-gray-300 hover:underline">Meenakshi Amman Temple</Link>
                   </li>
                   <li className="flex items-center">
                     <span className="text-orange-500 mr-2">•</span>
-                    <span className="text-gray-700 dark:text-gray-300">Thirumalai Nayakkar Palace</span>
+                    <Link to="/madurai/thirumalai-nayakar-palace" className="text-gray-700 dark:text-gray-300 hover:underline">Thirumalai Nayakkar Palace</Link>
                   </li>
                   <li className="flex items-center">
                     <span className="text-orange-500 mr-2">•</span>
-                    <span className="text-gray-700 dark:text-gray-300">Gandhi Memorial Museum</span>
+                    <Link to="/madurai/gandhi-memorial-museum" className="text-gray-700 dark:text-gray-300 hover:underline">Gandhi Memorial Museum</Link>
                   </li>
                   <li className="flex items-center">
                     <span className="text-orange-500 mr-2">•</span>
-                    <span className="text-gray-700 dark:text-gray-300">Koodal Azhagar Temple</span>
+                    <Link to="/madurai/koodal-azhagar-temple" className="text-gray-700 dark:text-gray-300 hover:underline">Koodal Azhagar Temple</Link>
                   </li>
                 </ul>
               </div>

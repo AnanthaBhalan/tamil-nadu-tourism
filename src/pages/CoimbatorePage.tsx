@@ -8,8 +8,13 @@ const CoimbatorePage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-green-100 dark:from-gray-900 dark:to-gray-800 p-6 transition-colors duration-200">
       <div className="max-w-4xl mx-auto">
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-colors duration-200">
-          <div className="h-64 bg-green-600 flex items-center justify-center">
-            <div className="bg-black bg-opacity-50 h-full w-full flex items-center justify-center">
+          <div className="h-64 relative overflow-hidden">
+            <img 
+              src="/images/Marudhamalai Temple.jpg" 
+              alt="Coimbatore" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
               <h1 className="text-4xl font-bold text-white">Coimbatore</h1>
             </div>
           </div>
@@ -30,26 +35,22 @@ const CoimbatorePage: React.FC = () => {
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <span className="text-green-600 mr-2">•</span>
-                    <Link to="/location/coimbatore-marudhamalai" className="text-blue-600 hover:underline">
+                    <Link to="/coimbatore/marudhamalai-temple" className="text-gray-700 dark:text-gray-300 hover:underline">
                       Marudhamalai Temple
                     </Link>
                   </li>
                   <li className="flex items-center">
                     <span className="text-green-600 mr-2">•</span>
-                    <Link to="/location/coimbatore-voc-park" className="text-blue-600 hover:underline">
-                      VOC Park & Zoo
-                    </Link>
+                    <Link to="/coimbatore/voc-park" className="text-gray-700 dark:text-gray-300 hover:underline">VOC Park & Zoo</Link>
                   </li>
                   <li className="flex items-center">
                     <span className="text-green-600 mr-2">•</span>
-                    <Link to="/location/coimbatore-gedee" className="text-blue-600 hover:underline">
-                      G.D. Naidu Museum
-                    </Link>
+                    <Link to="/coimbatore/gd-naidu-museum" className="text-gray-700 dark:text-gray-300 hover:underline">G.D. Naidu Museum</Link>
                   </li>
                   <li className="flex items-center">
                     <span className="text-green-600 mr-2">•</span>
-                    <Link to="/location/coimbatore-black-thunder" className="text-blue-600 hover:underline">
-                      Black Thunder Water Theme Park
+                    <Link to="/coimbatore/siruvani-waterfalls" className="text-gray-700 dark:text-gray-300 hover:underline">
+                      Siruvani Waterfalls
                     </Link>
                   </li>
                 </ul>

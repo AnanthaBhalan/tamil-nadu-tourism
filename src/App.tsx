@@ -7,6 +7,31 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import DestinationsPage from './pages/DestinationsPage';
 import ContactPage from './pages/ContactPage';
+// Chennai Attractions
+import MarinaBeachPage from './pages/attractions/MarinaBeachPage';
+import KapaleeshwararTemplePage from './pages/attractions/KapaleeshwararTemplePage';
+import FortStGeorgePage from './pages/attractions/FortStGeorgePage';
+import SanThomeBasilicaPage from './pages/attractions/SanThomeBasilicaPage';
+// Madurai Attractions
+import MeenakshiTemplePage from './pages/attractions/MeenakshiTemplePage';
+import ThirumalaiNayakarPalacePage from './pages/attractions/ThirumalaiNayakarPalacePage';
+import GandhiMemorialMuseumPage from './pages/attractions/GandhiMemorialMuseumPage';
+import KoodalAzhagarTemplePage from './pages/attractions/KoodalAzhagarTemplePage';
+// Ooty Attractions
+import OotyBotanicalGardensPage from './pages/attractions/OotyBotanicalGardensPage';
+import DoddabettaPeakPage from './pages/attractions/DoddabettaPeakPage';
+import OotyLakePage from './pages/attractions/OotyLakePage';
+import NilgiriMountainRailwayPage from './pages/attractions/NilgiriMountainRailwayPage';
+// Coimbatore Attractions
+import MarudhamalaiTemplePage from './pages/attractions/MarudhamalaiTemplePage';
+import SiruvaniWaterfallsPage from './pages/attractions/SiruvaniWaterfallsPage';
+import VOCParkPage from './pages/attractions/VOCParkPage';
+import GDNaiduMuseumPage from './pages/attractions/GDNaiduMuseumPage';
+// Kanchipuram Attractions
+import KamakshiAmmanTemplePage from './pages/attractions/KamakshiAmmanTemplePage';
+import KanchipuramSilkPage from './pages/attractions/KanchipuramSilkPage';
+import EkambareswararTemplePage from './pages/attractions/EkambareswararTemplePage';
+import VaradharajaPerumalTemplePage from './pages/attractions/VaradharajaPerumalTemplePage';
 import LocationDetailPage from './pages/LocationDetailPage';
 import MapViewPage from './pages/MapViewPage';
 import AdminPage from './pages/AdminPage';
@@ -33,6 +58,31 @@ function App() {
             <Route path="/ooty" element={<OotyPage />} />
             <Route path="/coimbatore" element={<CoimbatorePage />} />
             <Route path="/kanchipuram" element={<KanchipuramPage />} />
+            {/* Chennai Attractions */}
+            <Route path="/chennai/marina-beach" element={<MarinaBeachPage />} />
+            <Route path="/chennai/kapaleeshwarar-temple" element={<KapaleeshwararTemplePage />} />
+            <Route path="/chennai/fort-st-george" element={<FortStGeorgePage />} />
+            <Route path="/chennai/san-thome-basilica" element={<SanThomeBasilicaPage />} />
+            {/* Madurai Attractions */}
+            <Route path="/madurai/meenakshi-temple" element={<MeenakshiTemplePage />} />
+            <Route path="/madurai/thirumalai-nayakar-palace" element={<ThirumalaiNayakarPalacePage />} />
+            <Route path="/madurai/gandhi-memorial-museum" element={<GandhiMemorialMuseumPage />} />
+            <Route path="/madurai/koodal-azhagar-temple" element={<KoodalAzhagarTemplePage />} />
+            {/* Ooty Attractions */}
+            <Route path="/ooty/botanical-gardens" element={<OotyBotanicalGardensPage />} />
+            <Route path="/ooty/doddabetta-peak" element={<DoddabettaPeakPage />} />
+            <Route path="/ooty/lake-boat-house" element={<OotyLakePage />} />
+            <Route path="/ooty/nilgiri-mountain-railway" element={<NilgiriMountainRailwayPage />} />
+            {/* Coimbatore Attractions */}
+            <Route path="/coimbatore/marudhamalai-temple" element={<MarudhamalaiTemplePage />} />
+            <Route path="/coimbatore/siruvani-waterfalls" element={<SiruvaniWaterfallsPage />} />
+            <Route path="/coimbatore/voc-park" element={<VOCParkPage />} />
+            <Route path="/coimbatore/gd-naidu-museum" element={<GDNaiduMuseumPage />} />
+            {/* Kanchipuram Attractions */}
+            <Route path="/kanchipuram/kamakshi-amman-temple" element={<KamakshiAmmanTemplePage />} />
+            <Route path="/kanchipuram/silk-sarees" element={<KanchipuramSilkPage />} />
+            <Route path="/kanchipuram/ekambareswarar-temple" element={<EkambareswararTemplePage />} />
+            <Route path="/kanchipuram/varadharaja-perumal-temple" element={<VaradharajaPerumalTemplePage />} />
             <Route path="/location/:id" element={<LocationDetailPage />} />
             <Route path="/map" element={<MapViewPage />} />
             <Route path="/admin" element={<AdminPage />} />

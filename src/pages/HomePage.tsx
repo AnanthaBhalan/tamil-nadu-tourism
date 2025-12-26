@@ -41,7 +41,7 @@ const HomePage = () => {
       id: 'chennai',
       name: 'Chennai', 
       description: 'The Gateway to South India',
-      image: '/images/cities/chennai.jpg',
+      image: '/images/destinations/chennai.jpg',
       path: '/chennai',
       featured: true
     },
@@ -49,7 +49,7 @@ const HomePage = () => {
       id: 'coimbatore',
       name: 'Coimbatore', 
       description: 'Manchester of South India',
-      image: '/images/cities/coimbatore.jpg',
+      image: '/images/Marudhamalai Temple.jpg',
       path: '/coimbatore',
       featured: true
     },
@@ -57,7 +57,7 @@ const HomePage = () => {
       id: 'madurai',
       name: 'Madurai', 
       description: 'Athens of the East',
-      image: '/images/cities/madurai.jpg',
+      image: '/images/destinations/madurai.jpg',
       path: '/madurai',
       featured: true
     },
@@ -65,7 +65,7 @@ const HomePage = () => {
       id: 'kanchipuram',
       name: 'Kanchipuram', 
       description: 'City of Thousand Temples',
-      image: '/images/cities/kanchipuram.jpg',
+      image: '/images/Kamakshi Amman Temple.jpg',
       path: '/kanchipuram',
       featured: true
     },
@@ -73,7 +73,7 @@ const HomePage = () => {
       id: 'ooty',
       name: 'Ooty', 
       description: 'Queen of Hill Stations',
-      image: '/images/cities/ooty.jpg',
+      image: '/images/destinations/ooty.jpg',
       path: '/ooty',
       featured: true
     }

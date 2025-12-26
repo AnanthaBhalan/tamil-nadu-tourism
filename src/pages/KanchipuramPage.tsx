@@ -8,8 +8,13 @@ const KanchipuramPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-b from-amber-50 to-amber-100 dark:from-gray-900 dark:to-gray-800 p-6 transition-colors duration-200">
       <div className="max-w-4xl mx-auto">
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-colors duration-200">
-          <div className="h-64 bg-amber-600 flex items-center justify-center">
-            <div className="bg-black bg-opacity-50 h-full w-full flex items-center justify-center">
+          <div className="h-64 relative overflow-hidden">
+            <img 
+              src="/images/Kamakshi Amman Temple.jpg" 
+              alt="Kanchipuram" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
               <h1 className="text-4xl font-bold text-white">Kanchipuram</h1>
             </div>
           </div>
@@ -30,26 +35,26 @@ const KanchipuramPage: React.FC = () => {
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <span className="text-amber-600 mr-2">•</span>
-                    <Link to="/location/kanchi-kamakshi" className="text-blue-600 hover:underline">
+                    <Link to="/kanchipuram/kamakshi-amman-temple" className="text-gray-700 dark:text-gray-300 hover:underline">
                       Kamakshi Amman Temple
                     </Link>
                   </li>
                   <li className="flex items-center">
                     <span className="text-amber-600 mr-2">•</span>
-                    <Link to="/location/kanchi-ekambareswarar" className="text-blue-600 hover:underline">
+                    <Link to="/kanchipuram/ekambareswarar-temple" className="text-gray-700 dark:text-gray-300 hover:underline">
                       Ekambareswarar Temple
                     </Link>
                   </li>
                   <li className="flex items-center">
                     <span className="text-amber-600 mr-2">•</span>
-                    <Link to="/location/kanchi-varadharaja" className="text-blue-600 hover:underline">
+                    <Link to="/kanchipuram/varadharaja-perumal-temple" className="text-gray-700 dark:text-gray-300 hover:underline">
                       Varadharaja Perumal Temple
                     </Link>
                   </li>
                   <li className="flex items-center">
                     <span className="text-amber-600 mr-2">•</span>
-                    <Link to="/location/kanchi-silk" className="text-blue-600 hover:underline">
-                      Silk Weaving Centers
+                    <Link to="/kanchipuram/silk-sarees" className="text-gray-700 dark:text-gray-300 hover:underline">
+                      Kanchipuram Silk Sarees
                     </Link>
                   </li>
                 </ul>
