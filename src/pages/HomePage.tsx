@@ -112,7 +112,7 @@ const HomePage = () => {
                 Explore on Map
               </Link>
               <Link 
-                to="/#destinations"
+                to="/destinations"
                 className="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition duration-300 inline-flex items-center"
               >
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

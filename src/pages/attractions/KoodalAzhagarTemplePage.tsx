@@ -6,8 +6,13 @@ const KoodalAzhagarTemplePage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 p-6 transition-colors duration-200">
       <div className="max-w-4xl mx-auto">
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-colors duration-200">
-          <div className="h-64 bg-gradient-to-r from-orange-600 to-red-600 flex items-center justify-center">
-            <div className="bg-black bg-opacity-50 h-full w-full flex items-center justify-center">
+          <div className="h-64 relative overflow-hidden">
+            <img 
+              src="/images/Koodal Azhagar Temple.jpg" 
+              alt="Koodal Azhagar Temple" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
               <h1 className="text-4xl font-bold text-white">Koodal Azhagar Temple</h1>
             </div>
           </div>

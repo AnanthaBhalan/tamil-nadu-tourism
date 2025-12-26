@@ -1,16 +1,49 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
+// Utility function to handle image loading and errors
+const ImageWithFallback = ({ 
+  src, 
+  alt, 
+  className = '' 
+}: { 
+  src: string; 
+  alt: string; 
+  className?: string 
+}) => {
+  const [imgSrc, setImgSrc] = React.useState<string>(src);
+  const [isLoading, setIsLoading] = React.useState<boolean>(true);
+
+  return (
+    <div className="relative w-full h-full overflow-hidden">
+      {isLoading && (
+        <div className="absolute inset-0 bg-gray-200 animate-pulse"></div>
+      )}
+      <img 
+        src={imgSrc}
+        alt={alt}
+        className={`w-full h-full object-cover transition-opacity duration-300 ${
+          isLoading ? 'opacity-0' : 'opacity-100'
+        } ${className}`}
+        onLoad={() => setIsLoading(false)}
+        onError={() => {
+          setImgSrc('/images/placeholder-city.jpg');
+          setIsLoading(false);
+        }}
+      />
+    </div>
+  );
+};
+
 const GDNaiduMuseumPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 p-6 transition-colors duration-200">
       <div className="max-w-4xl mx-auto">
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-colors duration-200">
           <div className="h-64 relative overflow-hidden">
-            <img 
-              src="/images/Ghandi Memorial Museum.jpg" 
+            <ImageWithFallback 
+              src="/images/GD_Naidu_Museum.jpg" 
               alt="G.D. Naidu Museum" 
-              className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 bg-opacity-70 flex items-center justify-center">
               <h1 className="text-4xl font-bold text-white">G.D. Naidu Museum</h1>
