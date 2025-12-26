@@ -126,7 +126,6 @@ export const foodPlaces = {
       area: 'Black Thunder',
       image: '/images/food/coimbatore/black-thunder-foodcourt.jpg'
     }
-  ]
   ],
   Kancheepuram: [
     {
@@ -160,6 +159,40 @@ export const foodPlaces = {
       speciality: 'Quick meals for shoppers',
       area: 'Silk Weaving Centers',
       image: '/images/food/kancheepuram/silk-lane-eatery.svg'
+    }
+  ],
+  Chennai: [
+    {
+      id: 'chn-1',
+      name: 'Sea Breeze Café',
+      cuisine: 'Cafe, Snacks',
+      speciality: 'Sea-facing snacks and filter coffee',
+      area: 'Marina Beach',
+      image: '/images/food/chennai/sea-breeze-cafe.svg'
+    },
+    {
+      id: 'chn-2',
+      name: 'Kapali Tiffin',
+      cuisine: 'South Indian, Vegetarian',
+      speciality: 'Traditional tiffins near the temple',
+      area: 'Near Kapaleeshwarar Temple',
+      image: '/images/food/chennai/kapali-tiffin.svg'
+    },
+    {
+      id: 'chn-3',
+      name: 'Fort View Restaurant',
+      cuisine: 'Multi-Cuisine',
+      speciality: 'Meals with a view of Fort St. George',
+      area: 'Near Fort St. George',
+      image: '/images/food/chennai/fort-view-restaurant.svg'
+    },
+    {
+      id: 'chn-4',
+      name: 'Basilica Bistro',
+      cuisine: 'Cafe, Continental',
+      speciality: 'Coffee and light meals near the basilica',
+      area: 'Near San Thome Basilica',
+      image: '/images/food/chennai/basilica-bistro.svg'
     }
   ]
 };
