@@ -43,6 +43,8 @@ import MaduraiPage from './pages/MaduraiPage';
 import OotyPage from './pages/OotyPage';
 import CoimbatorePage from './pages/CoimbatorePage';
 import KanchipuramPage from './pages/KanchipuramPage';
+import RestaurantsPage from './pages/restaurants/index';
+import RestaurantDetailPage from './pages/restaurants/[id]';
 
 function App() {
   return (
@@ -62,7 +64,7 @@ function App() {
             <Route path="/ooty" element={<OotyPage />} />
             <Route path="/coimbatore" element={<CoimbatorePage />} />
             <Route path="/kanchipuram" element={<KanchipuramPage />} />
-            {/* Chennai Attractions */}
+{/* Chennai Attractions */}
             <Route path="/chennai/marina-beach" element={<MarinaBeachPage />} />
             <Route path="/chennai/kapaleeshwarar-temple" element={<KapaleeshwararTemplePage />} />
             <Route path="/chennai/fort-st-george" element={<FortStGeorgePage />} />
@@ -87,6 +89,9 @@ function App() {
             <Route path="/kanchipuram/silk-sarees" element={<KanchipuramSilkPage />} />
             <Route path="/kanchipuram/ekambareswarar-temple" element={<EkambareswararTemplePage />} />
             <Route path="/kanchipuram/varadharaja-perumal-temple" element={<VaradharajaPerumalTemplePage />} />
+            {/* Restaurant Routes */}
+            <Route path="/restaurants" element={<RestaurantsPage />} />
+            <Route path="/restaurants/:id" element={<RestaurantDetailPage />} />
             <Route path="/location/:id" element={<LocationDetailPage />} />
             <Route path="/map" element={<MapViewPage />} />
             <Route path="/admin" element={<AdminPage />} />
