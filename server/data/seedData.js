@@ -161,6 +161,40 @@ export const foodPlaces = {
       image: '/images/food/kancheepuram/silk-lane-eatery.svg'
     }
   ],
+  Madurai: [
+    {
+      id: 'mad-1',
+      name: 'Meenakshi Bhavan',
+      cuisine: 'South Indian, Vegetarian',
+      speciality: 'Traditional meals and filter coffee',
+      area: 'Near Meenakshi Amman Temple',
+      image: '/images/food/madurai/meenakshi-bhavan.svg'
+    },
+    {
+      id: 'mad-2',
+      name: 'Palace View Mess',
+      cuisine: 'South Indian, Non-Vegetarian',
+      speciality: 'Madurai-style mutton and biryani',
+      area: 'Near Thirumalai Nayakkar Palace',
+      image: '/images/food/madurai/palace-view-mess.svg'
+    },
+    {
+      id: 'mad-3',
+      name: 'Gandhi Cafe',
+      cuisine: 'Cafe, Snacks',
+      speciality: 'Light bites and beverages',
+      area: 'Near Gandhi Memorial Museum',
+      image: '/images/food/madurai/gandhi-cafe.svg'
+    },
+    {
+      id: 'mad-4',
+      name: 'Azhagar Tiffin',
+      cuisine: 'South Indian, Vegetarian',
+      speciality: 'Quick tiffin meals and snacks',
+      area: 'Near Koodal Azhagar Temple',
+      image: '/images/food/madurai/azhagar-tiffin.svg'
+    }
+  ],
   Chennai: [
     {
       id: 'chn-1',
