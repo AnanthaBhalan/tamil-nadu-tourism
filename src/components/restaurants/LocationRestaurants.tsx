@@ -92,7 +92,6 @@ const LocationRestaurants: React.FC<LocationRestaurantsProps> = ({ location, tit
           setRestaurants(mapped);
           return;
         }
-      }
 
       // Fallback to full restaurants API (database-backed)
       const response = await fetch('/api/restaurants');
@@ -329,15 +328,12 @@ const LocationRestaurants: React.FC<LocationRestaurantsProps> = ({ location, tit
                 }`}>
                   {isOpen(restaurant.opening_hours) ? 'Open Now' : 'Closed'}
                 </span>
-                <button
-                  onClick={() => {
-                    // In a real app, this would navigate to restaurant details
-                    alert(`Restaurant details for ${restaurant.name}`);
-                  }}
+                <Link
+                  to={`/restaurants/${restaurant.id}`}
                   className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
                 >
                   View Details →
-                </button>
+                </Link>
               </div>
             </div>
           </div>

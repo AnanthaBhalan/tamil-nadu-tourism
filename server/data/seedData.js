@@ -195,6 +195,40 @@ export const foodPlaces = {
       image: '/images/food/madurai/azhagar-tiffin.svg'
     }
   ],
+  Ooty: [
+    {
+      id: 'oty-1',
+      name: 'Botanical Garden Café',
+      cuisine: 'Cafe, Snacks',
+      speciality: 'Light meals and beverages near the gardens',
+      area: 'Ooty Botanical Gardens',
+      image: '/images/food/ooty/botanical-cafe.jpg'
+    },
+    {
+      id: 'oty-2',
+      name: 'Nilgiri Station Canteen',
+      cuisine: 'Cafe, Snacks',
+      speciality: 'Quick bites for train visitors',
+      area: 'Nilgiri Mountain Railway Station',
+      image: '/images/food/ooty/nilgiri-station-canteen.jpg'
+    },
+    {
+      id: 'oty-3',
+      name: 'Doddabetta Tea Stall',
+      cuisine: 'Tea Stall, Snacks',
+      speciality: 'Hot tea and local snacks with mountain view',
+      area: 'Doddabetta Peak',
+      image: '/images/food/ooty/doddabetta-tea-stall.jpg'
+    },
+    {
+      id: 'oty-4',
+      name: 'Boat House Café',
+      cuisine: 'Cafe, Continental',
+      speciality: 'Lake-side snacks and beverages',
+      area: 'Ooty Lake & Boat House',
+      image: '/images/food/ooty/boat-house-cafe.jpg'
+    }
+  ],
   Chennai: [
     {
       id: 'chn-1',

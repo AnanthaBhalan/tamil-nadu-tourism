@@ -16,6 +16,8 @@ import MaduraiPage from './pages/MaduraiPage';
 import OotyPage from './pages/OotyPage';
 import CoimbatorePage from './pages/CoimbatorePage';
 import KanchipuramPage from './pages/KanchipuramPage';
+import RestaurantsPage from './pages/restaurants/index';
+import RestaurantDetailPage from './pages/restaurants/[id]';
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
             <Route path="/ooty" element={<OotyPage />} />
             <Route path="/coimbatore" element={<CoimbatorePage />} />
             <Route path="/kanchipuram" element={<KanchipuramPage />} />
+            <Route path="/restaurants" element={<RestaurantsPage />} />
+            <Route path="/restaurants/:id" element={<RestaurantDetailPage />} />
             <Route path="/location/:id" element={<LocationDetailPage />} />
             <Route path="/map" element={<MapViewPage />} />
             <Route path="/admin" element={<AdminPage />} />
