@@ -156,6 +156,7 @@ const HomePage = () => {
             ))}
           </div>
         </div>
+      </div>
 
       {/* Quick Links Section */}
       <div className="py-16 bg-white dark:bg-gray-900 transition-colors duration-200">
