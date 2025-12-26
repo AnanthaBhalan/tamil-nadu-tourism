@@ -7,6 +7,8 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import DestinationsPage from './pages/DestinationsPage';
 import ContactPage from './pages/ContactPage';
+import TravelTipsPage from './pages/TravelTipsPage';
+import SeasonalTipsPage from './pages/SeasonalTipsPage';
 // Chennai Attractions
 import MarinaBeachPage from './pages/attractions/MarinaBeachPage';
 import KapaleeshwararTemplePage from './pages/attractions/KapaleeshwararTemplePage';
@@ -53,6 +55,8 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/destinations" element={<DestinationsPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/travel-tips" element={<TravelTipsPage />} />
+            <Route path="/seasonal-tips" element={<SeasonalTipsPage />} />
             <Route path="/chennai" element={<ChennaiPage />} />
             <Route path="/madurai" element={<MaduraiPage />} />
             <Route path="/ooty" element={<OotyPage />} />
