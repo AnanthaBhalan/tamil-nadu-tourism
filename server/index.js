@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
-import { locations, categories, districts } from './data/seedData.js';
+import { locations, categories, districts ,foodPlaces} from './data/seedData.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -31,6 +31,10 @@ app.get('/api/categories', (req, res) => {
 
 app.get('/api/districts', (req, res) => {
   res.json(districts);
+});
+app.get('/api/food/:district', (req, res) => {
+  const district = req.params.district;
+  res.json(foodPlaces[district] || []);
 });
 
 // Admin route to add new location (no auth for demo)

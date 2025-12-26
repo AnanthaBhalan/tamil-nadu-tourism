@@ -4,7 +4,7 @@ import { MagnifyingGlassIcon, FunnelIcon, XMarkIcon } from '@heroicons/react/24/
 import { StarIcon } from '@heroicons/react/24/solid';
 
 interface Restaurant {
-  id: number;
+  id: string | number;
   name: string;
   cuisine: string[];
   address: string;
@@ -53,11 +53,53 @@ const LocationRestaurants: React.FC<LocationRestaurantsProps> = ({ location, tit
   const fetchRestaurants = async () => {
     try {
       setLoading(true);
+      // First try the simple server-side seed endpoint (/server) that returns district foodPlaces
+      const seedResp = await fetch(`/api/food/${encodeURIComponent(location)}`);
+      let seedData: any[] = [];
+      if (seedResp.ok) {
+        seedData = await seedResp.json();
+      }
+
+      // Try alternate district name for common mismatch (Kanchipuram vs Kancheepuram)
+      if ((!Array.isArray(seedData) || seedData.length === 0) && location.toLowerCase().includes('kanchi')) {
+        const alt = 'Kancheepuram';
+        const altResp = await fetch(`/api/food/${encodeURIComponent(alt)}`);
+        if (altResp.ok) seedData = await altResp.json();
+      }
+
+      if (Array.isArray(seedData) && seedData.length > 0) {
+          const mapped = seedData.map((r: any) => ({
+            id: r.id,
+            name: r.name,
+            cuisine: Array.isArray(r.cuisine) ? r.cuisine : [r.cuisine],
+            address: r.area || '',
+            location: { type: 'Point', coordinates: [0, 0] },
+            opening_hours: {
+              monday: [{ open: '09:00', close: '21:00', isClosed: false }],
+              tuesday: [{ open: '09:00', close: '21:00', isClosed: false }],
+              wednesday: [{ open: '09:00', close: '21:00', isClosed: false }],
+              thursday: [{ open: '09:00', close: '21:00', isClosed: false }],
+              friday: [{ open: '09:00', close: '21:00', isClosed: false }],
+              saturday: [{ open: '09:00', close: '21:00', isClosed: false }],
+              sunday: [{ open: '09:00', close: '21:00', isClosed: false }],
+            },
+            contact: { phone: '', email: '' },
+            rating: r.rating || 4.0,
+            price_range: r.price_range || '',
+            images: r.image ? [r.image] : [],
+            reviews: []
+          } as Restaurant));
+          setRestaurants(mapped);
+          return;
+        }
+      }
+
+      // Fallback to full restaurants API (database-backed)
       const response = await fetch('/api/restaurants');
       const data = await response.json();
       // Filter restaurants by location (simple address-based filtering)
-      const locationRestaurants = data.filter((restaurant: Restaurant) => 
-        restaurant.address.toLowerCase().includes(location.toLowerCase())
+      const locationRestaurants = data.filter((restaurant: Restaurant) =>
+        restaurant.address && restaurant.address.toLowerCase().includes(location.toLowerCase())
       );
       setRestaurants(locationRestaurants);
     } catch (error) {

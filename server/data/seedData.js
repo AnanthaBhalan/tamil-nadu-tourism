@@ -44,3 +44,122 @@ export const locations = [
   },
   // Add more locations as needed
 ];
+export const foodPlaces = {
+  Coimbatore: [
+    {
+      id: 'cbt-1',
+      name: 'Hari Bhavanam',
+      cuisine: 'South Indian, Vegetarian',
+      speciality: 'Authentic Tamil meals and filter coffee',
+      area: 'Gandhipuram',
+      image: '/images/food/coimbatore/hari-bhavanam.jpg'
+    },
+    {
+      id: 'cbt-2',
+      name: 'Annalakshmi Restaurant',
+      cuisine: 'South Indian, Vegetarian',
+      speciality: 'Traditional sattvic meals',
+      area: 'RS Puram',
+      image: '/images/food/coimbatore/annalakshmi.jpg'
+    },
+    {
+      id: 'cbt-3',
+      name: 'Junior Kuppanna',
+      cuisine: 'South Indian, Non-Vegetarian',
+      speciality: 'Kongu-style biryani and mutton dishes',
+      area: 'Peelamedu',
+      image: '/images/food/coimbatore/junior-kuppanna.jpg'
+    },
+    {
+      id: 'cbt-4',
+      name: 'Sree Annapoorna',
+      cuisine: 'South Indian, Vegetarian',
+      speciality: 'Ghee roast and dosa varieties',
+      area: 'Town Hall',
+      image: '/images/food/coimbatore/sree-annapoorna.jpg'
+    },
+    {
+      id: 'cbt-5',
+      name: 'On The Go',
+      cuisine: 'Multi-Cuisine',
+      speciality: 'Burgers, pasta and continental food',
+      area: 'Race Course',
+      image: '/images/food/coimbatore/on-the-go.jpg'
+    },
+    {
+      id: 'cbt-10',
+      name: 'Ammayi Café',
+      cuisine: 'Cafe, Continental',
+      speciality: 'Filter coffee and quick bites',
+      area: 'Bharathipuram',
+      image: '/images/food/coimbatore/ammayi-cafe.jpg'
+    },
+    {
+      id: 'cbt-11',
+      name: 'Marudhamalai Tiffin Centre',
+      cuisine: 'South Indian, Vegetarian',
+      speciality: 'Idli, dosa and filter coffee',
+      area: 'Marudhamalai',
+      image: '/images/food/coimbatore/marudhamalai-tiffin.jpg'
+    },
+    {
+      id: 'cbt-12',
+      name: 'VOC Park Cafe',
+      cuisine: 'Cafe, Snacks',
+      speciality: 'Quick bites and beverages',
+      area: 'VOC Park & Zoo',
+      image: '/images/food/coimbatore/voc-park-cafe.jpg'
+    },
+    {
+      id: 'cbt-13',
+      name: 'G.D. Naidu Mess',
+      cuisine: 'South Indian, Non-Vegetarian',
+      speciality: 'Kongu-style meals and local specialties',
+      area: 'G.D. Naidu Museum',
+      image: '/images/food/coimbatore/gd-naidu-mess.jpg'
+    },
+    {
+      id: 'cbt-14',
+      name: 'Black Thunder Food Court',
+      cuisine: 'Multi-Cuisine',
+      speciality: 'Family-friendly meals and snacks',
+      area: 'Black Thunder',
+      image: '/images/food/coimbatore/black-thunder-foodcourt.jpg'
+    }
+  ]
+  ],
+  Kancheepuram: [
+    {
+      id: 'kch-1',
+      name: 'Saravana Bhavan',
+      cuisine: 'South Indian, Vegetarian',
+      speciality: 'Thali and dosas',
+      area: 'Near Kamakshi Amman Temple',
+      image: '/images/food/kancheepuram/saravana-bhavan.svg'
+    },
+    {
+      id: 'kch-2',
+      name: 'Annan Cafe',
+      cuisine: 'South Indian, Vegetarian',
+      speciality: 'Filter coffee and snacks',
+      area: 'Near Ekambareswarar Temple',
+      image: '/images/food/kancheepuram/annan-cafe.svg'
+    },
+    {
+      id: 'kch-3',
+      name: 'Shree Krishna Mess',
+      cuisine: 'South Indian, Non-Vegetarian',
+      speciality: 'Kanchipuram-style meals',
+      area: 'Near Varadharaja Perumal Temple',
+      image: '/images/food/kancheepuram/shree-krishna-mess.svg'
+    },
+    {
+      id: 'kch-4',
+      name: 'Silk Lane Eatery',
+      cuisine: 'Multi-Cuisine',
+      speciality: 'Quick meals for shoppers',
+      area: 'Silk Weaving Centers',
+      image: '/images/food/kancheepuram/silk-lane-eatery.svg'
+    }
+  ]
+};

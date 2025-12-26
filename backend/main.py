@@ -288,6 +288,57 @@ async def create_sample_data():
         )
         restaurant.cuisines = [cuisines[0], cuisines[1]]  # South Indian, North Indian
         db.add(restaurant)
+        
+        # Add Kanchipuram sample restaurants
+        r1 = Restaurant(
+            name="Saravana Bhavan",
+            address="Near Kamakshi Amman Temple, Kanchipuram",
+            location={"type": "Point", "coordinates": [12.8479, 79.7038]},
+            opening_hours={"monday": [{"open": "08:00", "close": "22:00", "isClosed": False}]},
+            contact={"phone": "+919900000001", "email": "", "website": ""},
+            price_range="$",
+            images=["/images/food/kancheepuram/saravana-bhavan.svg"],
+            rating=4.2
+        )
+        r1.cuisines = [cuisines[0]]
+
+        r2 = Restaurant(
+            name="Annan Cafe",
+            address="Near Ekambareswarar Temple, Kanchipuram",
+            location={"type": "Point", "coordinates": [12.8475, 79.6998]},
+            opening_hours={"monday": [{"open": "07:30", "close": "20:30", "isClosed": False}]},
+            contact={"phone": "+919900000002", "email": "", "website": ""},
+            price_range="$",
+            images=["/images/food/kancheepuram/annan-cafe.svg"],
+            rating=4.0
+        )
+        r2.cuisines = [cuisines[0]]
+
+        r3 = Restaurant(
+            name="Shree Krishna Mess",
+            address="Near Varadharaja Perumal Temple, Kanchipuram",
+            location={"type": "Point", "coordinates": [12.8365, 79.7066]},
+            opening_hours={"monday": [{"open": "08:00", "close": "21:00", "isClosed": False}]},
+            contact={"phone": "+919900000003", "email": "", "website": ""},
+            price_range="$",
+            images=["/images/food/kancheepuram/shree-krishna-mess.svg"],
+            rating=4.1
+        )
+        r3.cuisines = [cuisines[0]]
+
+        r4 = Restaurant(
+            name="Silk Lane Eatery",
+            address="Silk Weaving Centers, Kanchipuram",
+            location={"type": "Point", "coordinates": [12.8342, 79.7036]},
+            opening_hours={"monday": [{"open": "09:00", "close": "20:00", "isClosed": False}]},
+            contact={"phone": "+919900000004", "email": "", "website": ""},
+            price_range="$",
+            images=["/images/food/kancheepuram/silk-lane-eatery.svg"],
+            rating=3.9
+        )
+        r4.cuisines = [cuisines[0]]
+
+        db.add_all([restaurant, r1, r2, r3, r4])
         await db.commit()
         
         return {"status": "Sample data created"}
