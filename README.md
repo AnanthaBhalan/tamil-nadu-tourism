@@ -9,6 +9,7 @@ A modern web application showcasing the beautiful tourist destinations of Tamil 
 - Responsive design for all devices
 - Fast and efficient performance with Vite
 - Secure backend API with Express
+- Trip Planner with MongoDB integration
 
 ## Tech Stack
 
@@ -17,42 +18,75 @@ A modern web application showcasing the beautiful tourist destinations of Tamil 
 - **Maps**: Leaflet
 - **State Management**: React Query
 - **Backend**: Node.js, Express
-- **Deployment**: GitHub Pages
+- **Database**: MongoDB Atlas
 
-## Getting Started
+## Setup for Judges / Evaluators
 
 ### Prerequisites
 
 - Node.js (v16 or later)
 - npm (v8 or later)
-- Git
+- MongoDB Atlas account (for database)
 
-### Installation
+### Installation and Setup
 
-1. Clone the repository:
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/AnanthaBhalan/tamil-nadu-tourism.git
    cd tamil-nadu-tourism
    ```
 
-2. Install dependencies:
+2. **Set up environment variables:**
+   ```bash
+   cp .env.example .env
+   ```
+   
+   Edit the `.env` file and replace `your-mongodb-connection-string-here` with your own MongoDB connection string from MongoDB Atlas.
+
+3. **Install dependencies:**
    ```bash
    npm install
    ```
 
-3. Start the development server:
+4. **Seed the database with sample data:**
+   ```bash
+   npm run seed
+   ```
+   This will populate your MongoDB database with sample Tamil Nadu tourist destinations.
+
+5. **Start the backend server:**
+   ```bash
+   npm run server
+   ```
+   The backend will run on http://localhost:5000
+
+6. **Start the frontend development server:**
    ```bash
    npm run dev
    ```
+   The frontend will run on http://localhost:3000
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+7. **Open the application:**
+   Navigate to http://localhost:3000 in your browser and use the Trip Planner feature.
+
+### Important Notes
+
+- If the database is empty, the Trip Planner will show no places until you run the `npm run seed` command.
+- The application requires both frontend and backend servers to be running simultaneously.
+- Make sure your MongoDB Atlas cluster allows connections from your IP address.
 
 ## Available Scripts
 
-- `npm run dev` - Start development server
+- `npm run dev` - Start frontend development server
+- `npm run server` - Start backend server only
+- `npm run seed` - Seed database with sample destinations
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
 - `npm start` - Start production server
+
+## Security Note
+
+This repository does not contain any real credentials or secrets. The actual `.env` file is not committed to version control. Judges must use their own MongoDB connection string and credentials. All environment variables are loaded from the `.env` file which should be created from `.env.example`.
 
 ## Project Structure
 
