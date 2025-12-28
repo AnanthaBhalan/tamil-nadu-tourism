@@ -61,26 +61,68 @@ const KanchipuramPage: React.FC = () => {
               </div>
               
               <div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Quick Facts</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Best Time to Visit: October to March</li>
-                  <li>• Famous For: Temples, Silk Sarees</li>
-                  <li>• Local Cuisine: Idli, Dosa, Pongal, Filter Coffee</li>
-                  <li>• Nearest Airport: Chennai International Airport (MAA)</li>
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Quick Facts</h3>
+                <ul className="space-y-2">
+                  <li className="flex">
+                    <span className="font-medium w-32 text-gray-700 dark:text-gray-300">Best Time to Visit:</span>
+                    <span className="text-gray-600 dark:text-gray-300">October to March</span>
+                  </li>
+                  <li className="flex">
+                    <span className="font-medium w-32 text-gray-700 dark:text-gray-300">Local Cuisine:</span>
+                    <span className="text-gray-600 dark:text-gray-300">Idli, Dosa, Pongal, Filter Coffee</span>
+                  </li>
+                  <li className="flex">
+                    <span className="font-medium w-32 text-gray-700 dark:text-gray-300">Language:</span>
+                    <span className="text-gray-600 dark:text-gray-300">Tamil, English</span>
+                  </li>
+                  <li className="flex">
+                    <span className="font-medium w-32 text-gray-700 dark:text-gray-300">Best For:</span>
+                    <span className="text-gray-600 dark:text-gray-300">Temple Tours, Silk Shopping</span>
+                  </li>
                 </ul>
               </div>
             </div>
 
+            <div className="bg-amber-50 dark:bg-amber-900/30 p-4 rounded-lg mb-6">
+              <h3 className="text-lg font-semibold text-amber-800 dark:text-amber-300 mb-2">Travel Tips</h3>
+              <p className="text-amber-700 dark:text-amber-300">
+                • Visit temples early morning for peaceful darshan
+                <br />
+                • Buy authentic silk sarees from government-approved shops
+                <br />
+                • Try the traditional Kanchipuram idli
+                <br />
+                • Hire a local guide for temple history and stories
+              </p>
+            </div>
+
             <div className="mb-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Location</h3>
-              <div className="h-64 rounded-lg overflow-hidden">
+              <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Explore Kanchipuram</h3>
+              <div className="h-96 w-full rounded-lg overflow-hidden">
                 <MapComponent 
                   center={[12.8342, 79.7036]} 
                   zoom={12}
                   markers={[
-                    { position: [12.8479, 79.7038], title: 'Kamakshi Amman Temple' },
-                    { position: [12.8475, 79.6998], title: 'Ekambareswarar Temple' },
-                    { position: [12.8365, 79.7066], title: 'Varadharaja Perumal Temple' },
+                    {
+                      position: [12.8479, 79.7038],
+                      title: 'Kamakshi Amman Temple',
+                      description: 'Sacred temple of Goddess Kamakshi'
+                    },
+                    {
+                      position: [12.8475, 79.6998],
+                      title: 'Ekambareswarar Temple',
+                      description: 'Temple of Lord Shiva'
+                    },
+                    {
+                      position: [12.8365, 79.7066],
+                      title: 'Varadharaja Perumal Temple',
+                      description: 'Vishnu temple with intricate sculptures'
+                    },
+                    {
+                      position: [12.8460, 79.7045],
+                      title: 'Silk Saree Shops',
+                      description: 'Traditional silk weaving centers'
+                    }
                   ]}
                 />
               </div>

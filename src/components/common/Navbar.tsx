@@ -28,6 +28,9 @@ const Navbar = () => {
             <Link to="/seasonal-tips" className="px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white">
               Seasonal Tips
             </Link>
+            <Link to="/trip-planner" className="px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white">
+              Trip Planner
+            </Link>
             <Link to="/contact" className="px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white">
               Contact
             </Link>

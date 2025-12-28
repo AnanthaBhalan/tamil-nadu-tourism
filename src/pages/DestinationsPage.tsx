@@ -44,6 +44,14 @@ const DestinationsPage: React.FC = () => {
       highlights: ['Kamakshi Amman Temple', 'Ekambareswarar Temple', 'Varadharaja Perumal Temple']
     },
     {
+      name: 'Thanjavur',
+      description: 'Rice Bowl of Tamil Nadu, home to the magnificent Brihadeeswarar Temple',
+      image: '/images/Brihadeeswarar Temple.jpg',
+      color: 'purple',
+      path: '/thanjavur',
+      highlights: ['Brihadeeswarar Temple', 'Thanjavur Palace', 'Saraswathi Mahal Library']
+    },
+    {
       name: 'Rameshwaram',
       description: 'Sacred pilgrimage site with beautiful beaches and temples',
       image: '/images/Ramanathaswamy Temple.jpg',

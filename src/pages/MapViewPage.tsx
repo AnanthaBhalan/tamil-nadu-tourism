@@ -49,6 +49,12 @@ const locations: Array<{
     position: [11.4102, 76.6950],
     description: 'Queen of Hill Stations' 
   },
+  { 
+    id: 6, 
+    name: 'Thanjavur', 
+    position: [10.7850, 79.1378],
+    description: 'Rice Bowl of Tamil Nadu' 
+  },
 ];
 
 const MapViewPage = () => {

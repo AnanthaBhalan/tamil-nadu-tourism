@@ -2,15 +2,8 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import MapComponent from '../components/MapComponent';
 import LocationRestaurants from '../components/restaurants/LocationRestaurants';
-import { useEffect, useState } from 'react';
 
 const CoimbatorePage: React.FC = () => {
-  const [foodPlaces, setFoodPlaces] = useState<any[]>([]);
-  useEffect(() => {
-    fetch('http://localhost:5000/api/food/Coimbatore')
-      .then(res => res.json())
-      .then(data => setFoodPlaces(data));
-  }, []);
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-green-100 dark:from-gray-900 dark:to-gray-800 p-6 transition-colors duration-200">
       <div className="max-w-4xl mx-auto">
@@ -64,26 +57,68 @@ const CoimbatorePage: React.FC = () => {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Quick Facts</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Best Time to Visit: October to March</li>
-                  <li>• Famous For: Textile Industry, Educational Institutions</li>
-                  <li>• Local Cuisine: Kalan, Kootu, Pongal</li>
-                  <li>• Nearest Airport: Coimbatore International Airport (CJB)</li>
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Quick Facts</h3>
+                <ul className="space-y-2">
+                  <li className="flex">
+                    <span className="font-medium w-32 text-gray-700 dark:text-gray-300">Best Time to Visit:</span>
+                    <span className="text-gray-600 dark:text-gray-300">October to March</span>
+                  </li>
+                  <li className="flex">
+                    <span className="font-medium w-32 text-gray-700 dark:text-gray-300">Local Cuisine:</span>
+                    <span className="text-gray-600 dark:text-gray-300">Kalan, Kootu, Pongal</span>
+                  </li>
+                  <li className="flex">
+                    <span className="font-medium w-32 text-gray-700 dark:text-gray-300">Language:</span>
+                    <span className="text-gray-600 dark:text-gray-300">Tamil, English</span>
+                  </li>
+                  <li className="flex">
+                    <span className="font-medium w-32 text-gray-700 dark:text-gray-300">Best For:</span>
+                    <span className="text-gray-600 dark:text-gray-300">Nature Lovers, Industrial Tourism</span>
+                  </li>
                 </ul>
               </div>
             </div>
 
+            <div className="bg-green-50 dark:bg-green-900/30 p-4 rounded-lg mb-6">
+              <h3 className="text-lg font-semibold text-green-800 dark:text-green-300 mb-2">Travel Tips</h3>
+              <p className="text-green-700 dark:text-green-300">
+                • Visit Marudhamalai Temple early morning for peaceful darshan
+                <br />
+                • Try the famous Coimbatore filter coffee at local cafes
+                <br />
+                • Use auto-rickshaws for local transportation
+                <br />
+                • Don't miss the textile markets for shopping
+              </p>
+            </div>
+
             <div className="mb-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Location</h3>
-              <div className="h-64 rounded-lg overflow-hidden">
+              <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Explore Coimbatore</h3>
+              <div className="h-96 w-full rounded-lg overflow-hidden">
                 <MapComponent
                   center={[11.0168, 76.9558]}
                   zoom={12}
                   markers={[
-                    { position: [11.0723, 76.9922], title: 'Coimbatore Junction' },
-                    { position: [11.0106, 76.9671], title: 'Marudhamalai Temple' },
-                    { position: [11.0227, 76.9419], title: 'VOC Park' },
+                    {
+                      position: [11.0723, 76.9922],
+                      title: 'Coimbatore Junction',
+                      description: 'Main railway station'
+                    },
+                    {
+                      position: [11.0106, 76.9671],
+                      title: 'Marudhamalai Temple',
+                      description: 'Ancient hill temple'
+                    },
+                    {
+                      position: [11.0227, 76.9419],
+                      title: 'VOC Park',
+                      description: 'Amusement park and zoo'
+                    },
+                    {
+                      position: [10.9900, 76.9600],
+                      title: 'G.D. Naidu Museum',
+                      description: 'Industrial and technology museum'
+                    }
                   ]}
                 />
               </div>
@@ -91,14 +126,6 @@ const CoimbatorePage: React.FC = () => {
 
             {/* Restaurants Section */}
             <div className="mt-8">
-              <h2 className="text-3xl font-bold mb-4">
-                Places to Eat in Coimbatore
-              </h2>
-
-              <p className="text-gray-600 mb-6">
-                The system displays a curated list of popular dining locations in Coimbatore,
-                allowing users to explore authentic local culinary experiences.
-              </p>
               <LocationRestaurants location="Coimbatore" title="Coimbatore" />
             </div>
 

@@ -9,6 +9,12 @@ import DestinationsPage from './pages/DestinationsPage';
 import ContactPage from './pages/ContactPage';
 import TravelTipsPage from './pages/TravelTipsPage';
 import SeasonalTipsPage from './pages/SeasonalTipsPage';
+import TripPlanner from './pages/TripPlanner';
+import BrihadeeswararTemplePage from './pages/attractions/BrihadeeswararTemplePage';
+import ThanjavurPalacePage from './pages/attractions/ThanjavurPalacePage';
+import ThanjavurArtGalleryPage from './pages/attractions/ThanjavurArtGalleryPage';
+import SaraswathiMahalLibraryPage from './pages/attractions/SaraswathiMahalLibraryPage';
+import ThanjavurPage from './pages/ThanjavurPage';
 // Chennai Attractions
 import MarinaBeachPage from './pages/attractions/MarinaBeachPage';
 import KapaleeshwararTemplePage from './pages/attractions/KapaleeshwararTemplePage';
@@ -59,11 +65,18 @@ function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/travel-tips" element={<TravelTipsPage />} />
             <Route path="/seasonal-tips" element={<SeasonalTipsPage />} />
+            <Route path="/trip-planner" element={<TripPlanner />} />
+            <Route path="/thanjavur" element={<ThanjavurPage />} />
             <Route path="/chennai" element={<ChennaiPage />} />
             <Route path="/madurai" element={<MaduraiPage />} />
             <Route path="/ooty" element={<OotyPage />} />
             <Route path="/coimbatore" element={<CoimbatorePage />} />
             <Route path="/kanchipuram" element={<KanchipuramPage />} />
+            {/* Thanjavur Attractions */}
+            <Route path="/thanjavur/brihadeeswarar-temple" element={<BrihadeeswararTemplePage />} />
+            <Route path="/thanjavur/palace" element={<ThanjavurPalacePage />} />
+            <Route path="/thanjavur/art-gallery" element={<ThanjavurArtGalleryPage />} />
+            <Route path="/thanjavur/saraswathi-mahal-library" element={<SaraswathiMahalLibraryPage />} />
 {/* Chennai Attractions */}
             <Route path="/chennai/marina-beach" element={<MarinaBeachPage />} />
             <Route path="/chennai/kapaleeshwarar-temple" element={<KapaleeshwararTemplePage />} />

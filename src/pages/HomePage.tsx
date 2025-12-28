@@ -75,6 +75,14 @@ const HomePage = () => {
       image: '/images/destinations/ooty.jpg',
       path: '/ooty',
       featured: true
+    },
+    {
+      id: 'thanjavur',
+      name: 'Thanjavur',
+      description: 'Rice Bowl of Tamil Nadu',
+      image: '/images/Brihadeeswarar Temple.jpg',
+      path: '/thanjavur',
+      featured: true
     }
   ];
 
