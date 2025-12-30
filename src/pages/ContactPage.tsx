@@ -16,7 +16,7 @@ const ContactPage: React.FC = () => {
             <div className="text-center mb-8">
               <h2 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Get in Touch</h2>
               <p className="text-gray-600 dark:text-gray-300">
-                Have questions about Tamil Nadu tourism? Need help planning your trip? 
+                Have questions about exploring Tamil Nadu? Need help planning your journey? 
                 Our team is here to assist you with all your travel needs.
               </p>
             </div>
@@ -37,7 +37,7 @@ const ContactPage: React.FC = () => {
                     <div>
                       <h4 className="font-semibold text-gray-800 dark:text-white">Head Office</h4>
                       <p className="text-gray-600 dark:text-gray-300">
-                        Tamil Nadu Tourism Department<br />
+                        Payanam - Tamil Nadu Tourism<br />
                         Secretariat, Chennai - 600 009<br />
                         Tamil Nadu, India
                       </p>

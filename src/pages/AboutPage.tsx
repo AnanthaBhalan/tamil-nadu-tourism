@@ -8,7 +8,7 @@ const AboutPage: React.FC = () => {
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-colors duration-200">
           <div className="h-64 bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center">
             <div className="bg-black bg-opacity-50 h-full w-full flex items-center justify-center">
-              <h1 className="text-4xl font-bold text-white">About Tamil Nadu Tourism</h1>
+              <h1 className="text-4xl font-bold text-white">About Payanam</h1>
             </div>
           </div>
           

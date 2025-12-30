@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <Link to="/" className="text-xl font-bold text-gray-800 dark:text-white">
-              Tamil Nadu Tourism
+              Payanam
             </Link>
           </div>
           <div className="hidden md:flex items-center space-x-4">

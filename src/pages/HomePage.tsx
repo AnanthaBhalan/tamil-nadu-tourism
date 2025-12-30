@@ -100,11 +100,11 @@ const HomePage = () => {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300">
-                Discover Tamil Nadu
+                Payanam
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto">
-              Explore the rich cultural heritage, breathtaking landscapes, and vibrant cities of South India's most diverse state.
+              Discover the rich cultural heritage, breathtaking landscapes, and vibrant cities of Tamil Nadu through your journey with us.
             </p>
 
             <div className="flex flex-wrap justify-center gap-3">

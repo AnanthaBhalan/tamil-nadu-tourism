@@ -1,6 +1,6 @@
-# Tamil Nadu Tourism Web App
+# Payanam - Tamil Nadu Tourism Web App
 
-A modern web application showcasing the beautiful tourist destinations of Tamil Nadu, India. Built with React, Vite, and Express.
+A modern web application showcasing the beautiful tourist destinations of Tamil Nadu, India. Built with React, Vite, and Express. "Payanam" means journey in Tamil.
 
 ## Features
 
@@ -32,8 +32,8 @@ A modern web application showcasing the beautiful tourist destinations of Tamil 
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/AnanthaBhalan/tamil-nadu-tourism.git
-   cd tamil-nadu-tourism
+   git clone https://github.com/AnanthaBhalan/payanam.git
+   cd payanam
    ```
 
 2. **Set up environment variables:**
