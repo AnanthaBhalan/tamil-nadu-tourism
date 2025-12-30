@@ -31,19 +31,41 @@ export default function TripPlanner() {
 
   const cities = ['Thanjavur', 'Kanchipuram', 'Madurai', 'Chennai', 'Ooty', 'Coimbatore'];
 
+  const checkBackendHealth = async () => {
+    try {
+      const res = await axios.get('http://localhost:5000/health');
+      console.log('Backend health check:', res.data);
+      alert('Backend server is running correctly!');
+    } catch (e) {
+      console.error('Health check failed:', e);
+      alert('Backend server is not responding. Please start the server with "npm run server"');
+    }
+  };
+
   const handlePlan = async () => {
     setLoading(true);
     try {
       console.log('Sending request to backend...', { city, tripLength });
-      const res = await axios.post('http://localhost:8000/api/trips/plan', {
+      const res = await axios.post('http://localhost:5000/api/trips/plan', {
         city,
         tripLength
+      }, {
+        timeout: 10000, // 10 second timeout
+        headers: {
+          'Content-Type': 'application/json'
+        }
       });
       console.log('Response received:', res.data);
       setItinerary(res.data.itinerary);
-    } catch (e) {
+    } catch (e: any) {
       console.error('Error:', e);
-      alert('Failed to generate itinerary');
+      if (e.code === 'ERR_NETWORK') {
+        alert('Network Error: Unable to connect to backend server. Please ensure server is running on port 5000.');
+      } else if (e.code === 'ECONNREFUSED') {
+        alert('Connection Error: Backend server is not running. Please start the server with "npm run server".');
+      } else {
+        alert(`Failed to generate itinerary: ${e.message || 'Unknown error'}`);
+      }
     } finally {
       setLoading(false);
     }
